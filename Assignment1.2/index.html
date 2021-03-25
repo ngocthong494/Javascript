@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGnMENT1.2</title>
+    <script>
+
+        var mathScores = parseFloat(prompt("Enter math scores: ",));
+        var physicsScores = parseFloat(prompt("Enter physics Scores: ",));
+        var chemistryScores = parseFloat(prompt("Enter chemistry Scores: ",));
+
+        var averager;
+
+        if ( isNaN(mathScores) || mathScores <= 0 
+           || isNaN(physicsScores) || physicsScores <= 0
+           || isNaN(chemistryScores) || chemistryScores <= 0 ){
+           alert("Please enter valid data !")
+        } else {
+            averager = (mathScores + physicsScores + chemistryScores) / 3;
+            averager.toFixed(2);
+        }
+
+        if (averager >= 8.0) {
+            alert("Averager: " + averager + "\n" + "Rank: A" )
+        } else if (averager >= 6.5) {
+            alert("Averager: " + averager + "\n" + "Rank: B" )
+        } else if (averager >= 5.0) {
+            alert("Averager: " + averager + "\n" + "Rank: C" )
+        } else if (averager < 5.0) {
+            alert("Averager: " + averager + "\n" + "Rank: D" )
+        } 
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

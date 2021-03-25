@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignment1.4</title>
+    <script>
+
+        var a = parseFloat(prompt("Enter Value A:"));
+        var b = parseFloat(prompt("Enter Value B:"));
+        var c = parseFloat(prompt("Enter Value C:"));
+
+        var denta = (b * b) - (4 * a * c);
+        var x1;
+        var x2;
+
+        if(denta < 0){
+
+            alert("The equation has no solution");
+
+        } else if(denta == 0) {
+
+            x1 = (-b) / (2 * a);
+
+             alert(" Equations have double solutions X = " + x1);
+             
+        } else if(denta > 0) {
+
+            x1 = (( -b + Math.sqrt(denta)) / (2 * a)).toFixed(2);
+            
+            x2 = ((-b - Math.sqrt(denta)) / (2 * a)).toFixed(2);
+
+            alert(" Equations have two solutions X1 = " + x1 + "  X2 = " +x2 );
+       }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

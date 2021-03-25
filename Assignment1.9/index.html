@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1.9</title>
+</head>
+<body>
+    <script>
+
+        var a = parseInt(prompt("Enter value A:"));
+        var b = parseInt(prompt("Enter value B:"));
+
+        if (isNaN(a) || a < 0 || isNaN(b) || b < 0) {
+            alert("Please in valid data!")
+        } else {
+            
+            var max = 0;
+
+            function greatestCommonDivisor (a, b) {
+
+                if (a == 0 || b == 0) {
+                    return a + b;
+
+                } else if ( a > b) {
+
+                    for (var i = 0; i <= b; i++) {
+                        if (a % i == 0 && b % i == 0 && i >= max) {
+                            max = i;
+                        };
+                    };
+                } else {
+                    for (var i = 0; i <= a; i++) {
+                        if( a % i && b % i == 0 && i >= max) {
+                            max = i;
+                        };
+                    };
+                };
+                return max;
+            };
+        };
+        alert( "Greatest Common Divisor: " + greatestCommonDivisor(a, b));
+    </script>
+</body>
+</html>

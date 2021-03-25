@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1.7.3</title>
+</head>
+<body>
+    <script>
+
+        var studentList = [];
+        var i = 0;
+        var studentNumber = parseInt(prompt("Enter the student number you want to create:"));
+
+       do {
+            var index = i + 1;
+            alert("Enter Student Information  " + index);
+
+            var studentCode = prompt("Enter Student code  : " );
+            var studentName =  prompt("Enter Student Name : ");
+            var studentAge = parseInt(prompt ("Enter Age : ")) ;
+            var studentSex= prompt("Enter Student Sex : ");
+
+            var student = ("Code : " + studentCode + ", Name : " +
+            studentName+ ", Age : " + studentAge + " , Student sex : " + studentSex);
+
+            studentList[i] = student;
+            i++;
+       } while (i < studentNumber);
+
+       for(var j = 0; j < studentList.length; j++) {
+          document.write(studentList[j] + " <br>");
+        };
+
+    </script>
+</body>
+</html>

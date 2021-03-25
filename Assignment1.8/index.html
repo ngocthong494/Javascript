@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1.8</title>
+</head>
+<body>
+    <script>
+
+        var month = parseInt(prompt("Enter Month (from 1 to 12):"));
+
+        if (isNaN(month) || month <= 0 || month > 12) {
+            alert("Please in valid data !");
+            
+        } else {
+
+            var today = new Date;
+            var year = today.getFullYear();
+            let date = new Date(year, month, 0);
+
+            switch(month) {
+                case 1: 
+                alert(date.getDate());
+                break;
+                case 2: 
+                alert(date.getDate());
+                break;
+                case 3: 
+                alert(date.getDate());
+                break;
+                case 4: 
+                alert(date.getDate());
+                break;
+                case 5: 
+                alert(date.getDate());
+                break;
+                case 6: 
+                alert(date.getDate());
+                break;
+                case 7: 
+                alert(date.getDate());
+                break;
+                case 8: 
+                alert(date.getDate());
+                break;
+                case 9: 
+                alert(date.getDate());
+                break;
+                case 10: 
+                alert(date.getDate());
+                break;
+                case 11: 
+                alert(date.getDate());
+                break;
+                case 12: 
+                alert(date.getDate());
+                break;
+            };
+        };
+
+        
+         
+     
+    </script>
+</body>
+</html>
