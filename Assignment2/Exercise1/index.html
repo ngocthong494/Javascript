@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment2.1</title>
+</head>
+<body>
+    <script>
+
+        // Ex1:
+        // 1. Create an integer array with 10 elements and the fill the data for this array.
+
+        var integerArray = [1, 2, 3, 5, 7, 9, 10, 15, 65, 79];
+
+        // 2. Write a function to print all member of array to screen.
+
+        var printArray = function(arrayName) {
+            document.write(arrayName.join(", "));
+        }
+        
+        // 3. Write a function to permit user enter a value and find this is exits in array or not.
+
+        var searchMember = function (arrayName) {
+        var member = parseInt(prompt("Enter Member : "));
+        var isMember= arrayName.includes(member);
+            if(isMember == true) {
+                alert("Members you need to find in position: ");
+            } else{
+                alert("not have this member in array");
+            };
+        };
+
+        // 4.	Write a function to find the maximum value in this array.
+
+        var maximumArray = function (arrayName) {
+            var max =- Infinity;
+            for (const key in arrayName) {
+
+                if (arrayName[key] > max) {
+                        max = arrayName[key];
+                    };
+            };
+            document.write("<br> Largest number of array is : " + max);
+        };
+
+        // 5.	Write a function to calculate sum of all elements of array.
+        var sumArray = function (arrayName) {
+            var sum = 0;
+            for (const key in arrayName) {
+                    sum += arrayName[key];
+            };
+            document.write("<br> Sum Array = " + sum);
+        };
+
+        // 6.	Write a function to sort all elements of array by descending
+        var comparision = function(a, b) {
+            return b - a;
+        };
+
+        var sortArray = function(arrayName) {
+            arrayName.sort(comparision);
+            printArray(arrayName);
+        };
+
+        // 7.	Setup a menu to permit user enter a number to select to 
+        // run a function. Example: 1 – Print Array, 2- Search a member, 3- Find Maximum Number …
+
+        var programArray = function(arrayname){
+    
+            var index = parseInt(prompt("Enter number: \n 1.Print Array. \n 2.Search a member. \n 3.Find Maximum Number. \n 4.Sort array by descending. \n 5. Sum array."));
+            switch(index){
+                case 1:
+                    printArray(arrayname);
+                    break;
+                case 2:
+                    searchMember(arrayname);
+                    break;
+                case 3:
+                    maximumArray(arrayname);
+                    break;
+                case 4:
+                    sortArray(arrayname);
+                    break; 
+                case 5: 
+                    sumArray(arrayname);
+                    break;
+            };
+        };
+        window.onload = programArray(integerArray);
+
+    </script>
+</body>
+</html>
